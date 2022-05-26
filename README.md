@@ -16,7 +16,7 @@ private static int[] RGBtoXYZ(double r, double g, double b) {
     };
 }
 ```
-Результат работы: [/result/RGBtoXYZ/result.jpg](https://github.com/IvanHattler/blob/main/Practice03/result/RGBtoXYZ/result.jpg)
+Результат работы: [/result/RGBtoXYZ/result.jpg](https://github.com/IvanHattler/Practice03/blob/master/result/RGBtoXYZ/result.jpg)
 
 В качестве сторонней библиотеки была выбрана популярная OpenCV. Переход между всеми цветовыми пространствами осуществляется с помощью одной функции `Imgproc.cvtColor`, а направление перехода указывается с помощью константы, передаваемой в качестве последнего параметра.
 
@@ -25,9 +25,9 @@ Mat xyzMat = new Mat();
 Imgproc.cvtColor(img2Mat(img), xyzMat, Imgproc.COLOR_BGR2XYZ);
 BufferedImage resultL = (BufferedImage) HighGui.toBufferedImage(xyzMat);
 ```
-Результат работы: [/result/RGBtoXYZ/resultLib.jpg](https://github.com/IvanHattler/blob/main/Practice03/result/RGBtoXYZ/resultLib.jpg)
+Результат работы: [/result/RGBtoXYZ/resultLib.jpg](https://github.com/IvanHattler/Practice03/blob/master/result/RGBtoXYZ/resultLib.jpg)
 
-Сравнение с помощью построения разностного изображения представленной ниже: [/result/RGBtoXYZ/diff.jpg](https://github.com/IvanHattler/blob/main/Practice03/result/RGBtoXYZ/diff.jpg)
+Сравнение с помощью построения разностного изображения представленной ниже: [/result/RGBtoXYZ/diff.jpg](https://github.com/IvanHattler/Practice03/blob/master/result/RGBtoXYZ/diff.jpg)
 
 ### Перевод цветов из XYZ в RGB
 
@@ -40,7 +40,7 @@ private static int XYZtoRGB(int x, int y, int z) {
     return color(r, g, b);
 }
 ```
-Результат работы: [/result/XYZtoRGB/result.jpg](https://github.com/IvanHattler/blob/main/Practice03/result/XYZtoRGB/result.jpg)
+Результат работы: [/result/XYZtoRGB/result.jpg](https://github.com/IvanHattler/Practice03/blob/master/result/XYZtoRGB/result.jpg)
 
 Аналогичная функция реализованная с помощью OpenCV.
 
@@ -49,9 +49,9 @@ Mat rgbMat = new Mat();
 Imgproc.cvtColor(img2Mat(img), rgbMat, Imgproc.COLOR_XYZ2BGR);
 BufferedImage resultL = (BufferedImage) HighGui.toBufferedImage(rgbMat);
 ```
-Результат работы: [/result/XYZtoRGB/resultLib.jpg](https://github.com/IvanHattler/blob/main/Practice03/result/XYZtoRGB/resultLib.jpg)
+Результат работы: [/result/XYZtoRGB/resultLib.jpg](https://github.com/IvanHattler/Practice03/blob/master/result/XYZtoRGB/resultLib.jpg)
 
-Сравнение с помощью построения разностного изображения представленной ниже: [/result/XYZtoRGB/diff.jpg](https://github.com/IvanHattler/blob/main/Practice03/result/XYZtoRGB/diff.jpg)
+Сравнение с помощью построения разностного изображения представленной ниже: [/result/XYZtoRGB/diff.jpg](https://github.com/IvanHattler/Practice03/blob/master/result/XYZtoRGB/diff.jpg)
 
 ### Проекцию цветов исходного изображения на цветовой локус
 
@@ -84,7 +84,7 @@ public void loscut(BufferedImage img) throws IOException {
     save(loscut, "result/loscut", "result", FORMAT);
 }
 ```
-Результат работы: [/result/loscut/result.jpg](https://github.com/IvanHattler/blob/main/Practice03/result/loscut/result.jpg)
+Результат работы: [/result/loscut/result.jpg](https://github.com/IvanHattler/Practice03/blob/master/result/loscut/result.jpg)
 
 ### Перевод цветов из RGB в HSV
 
@@ -112,7 +112,7 @@ private static double[] RGBtoHSV(int r, int g, int b) {
     return new double[]{h / 2, s * 255, v * 255};
 }
 ```
-Результат работы: [/result/RGBtoHSV/result.jpg](https://github.com/IvanHattler/blob/main/Practice03/result/RGBtoHSV/result.jpg)
+Результат работы: [/result/RGBtoHSV/result.jpg](https://github.com/IvanHattler/Practice03/blob/master/result/RGBtoHSV/result.jpg)
 
 Аналогичная функция реализованная с помощью OpenCV.
 
@@ -121,9 +121,9 @@ Mat hsvMat = new Mat();
 Imgproc.cvtColor(img2Mat(img), hsvMat, Imgproc.COLOR_BGR2HSV);
 BufferedImage resultL = (BufferedImage) HighGui.toBufferedImage(hsvMat);
 ```
-Результат работы: [/result/RGBtoHSV/resultLib.jpg](https://github.com/IvanHattler/blob/main/Practice03/result/RGBtoHSV/resultLib.jpg)
+Результат работы: [/result/RGBtoHSV/resultLib.jpg](https://github.com/IvanHattler/Practice03/blob/master/result/RGBtoHSV/resultLib.jpg)
 
-Сравнение с помощью построения разностного изображения представленной ниже: [/result/RGBtoHSV/diff.jpg](https://github.com/IvanHattler/blob/main/Practice03/result/RGBtoHSV/diff.jpg)
+Сравнение с помощью построения разностного изображения представленной ниже: [/result/RGBtoHSV/diff.jpg](https://github.com/IvanHattler/Practice03/blob/master/result/RGBtoHSV/diff.jpg)
 
 ### Перевод цветов из HSV в RGB
 
@@ -182,7 +182,7 @@ public static int HSVtoRGB(float H, float S, float V) {
     return color(R, G, B);
 }
 ```
-Результат работы: [/result/HSVtoRGB/result.jpg](https://github.com/IvanHattler/blob/main/Practice03/result/HSVtoRGB/result.jpg)
+Результат работы: [/result/HSVtoRGB/result.jpg](https://github.com/IvanHattler/Practice03/blob/master/result/HSVtoRGB/result.jpg)
 
 Аналогичная функция реализованная с помощью OpenCV.
 
@@ -191,6 +191,6 @@ Mat rgbMat = new Mat();
 Imgproc.cvtColor(img2Mat(img), rgbMat, Imgproc.COLOR_HSV2BGR);
 BufferedImage resultL = (BufferedImage) HighGui.toBufferedImage(rgbMat);
 ```
-Результат работы: [/result/HSVtoRGB/resultLib.jpg](https://github.com/IvanHattler/blob/main/Practice03/result/HSVtoRGB/resultLib.jpg)
+Результат работы: [/result/HSVtoRGB/resultLib.jpg](https://github.com/IvanHattler/Practice03/blob/master/result/HSVtoRGB/resultLib.jpg)
 
-Сравнение с помощью построения разностного изображения представленной ниже: [/result/HSVtoRGB/diff.jpg](https://github.com/IvanHattler/blob/main/Practice03/result/HSVtoRGB/diff.jpg)
+Сравнение с помощью построения разностного изображения представленной ниже: [/result/HSVtoRGB/diff.jpg](https://github.com/IvanHattler/Practice03/blob/master/result/HSVtoRGB/diff.jpg)
