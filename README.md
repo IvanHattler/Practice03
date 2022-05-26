@@ -57,7 +57,7 @@ BufferedImage resultL = (BufferedImage) HighGui.toBufferedImage(rgbMat);
 
 Ниже приведен фрагмент кода, осуществляющий проекцию цветов исходного изображения на цветовой локус:
 ```
-public void loscut(BufferedImage img) throws IOException {
+public void locus(BufferedImage img) throws IOException {
     int size = 1000;
     int xMove = (int) Math.round(0.312 * size) / 2;
     int yMove = (int) Math.round(0.329 * size) / 2;
@@ -65,7 +65,7 @@ public void loscut(BufferedImage img) throws IOException {
     for (int i = 0; i < img.getHeight(); i++) {
         for (int j = 0; j < img.getWidth(); j++) {
             int rgb = img.getRGB(j, i);
-            int[] xyz = RGBtoXYZ(ch1(rgb), ch2(rgb), ch3(rgb));
+            int[] xyz = RGBtoXYZ(Utils.ch1(rgb), Utils.ch2(rgb), Utils.ch3(rgb));
             double sum = xyz[0] + xyz[1] + xyz[2];
             if (sum > 0) {
                 double nx = xyz[0] / sum;
@@ -81,10 +81,10 @@ public void loscut(BufferedImage img) throws IOException {
             }
         }
     }
-    save(loscut, "result/loscut", "result", FORMAT);
+    Utils.save(loscut, "result/locus", "result", "jpg");
 }
 ```
-Результат работы: [/result/loscut/result.jpg](https://github.com/IvanHattler/Practice03/blob/master/result/loscut/result.jpg)
+Результат работы: [/result/locus/result.jpg](https://github.com/IvanHattler/Practice03/blob/master/result/locus/result.jpg)
 
 ### Перевод цветов из RGB в HSV
 
